@@ -5,8 +5,8 @@
 #include <math.h>
 
 //decode ulaw byte to signed n bit sample
-static void ulaw_decod(int16_t* dst, int8_t* src, const uint16_t num_samples, const uint8_t target_res);
-static void ulaw_decod(int16_t* dst, int8_t* src, const uint16_t num_samples, const uint8_t target_res)
+static void ulaw_decode(int16_t* dst, int8_t* src, const uint16_t num_samples, const uint8_t target_res);
+static void ulaw_decode(int16_t* dst, int8_t* src, const uint16_t num_samples, const uint8_t target_res)
 {
     const uint16_t max_amp = (1UL << target_res) / 2;
     const double scl_factor = (double)(max_amp) / 255.0;
