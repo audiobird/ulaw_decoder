@@ -1,3 +1,6 @@
+#ifndef __ULAW_DECODER__
+#define __ULAW_DECODER__
+
 #include <stdint.h>
 #include <math.h>
 
@@ -25,3 +28,5 @@ static void ulaw_decod(int16_t* dst, int8_t* src, const uint16_t num_samples, co
         dst[x] = (int16_t)(out);
     }
 }
+
+#endif
